@@ -47,7 +47,7 @@
   </xmp_type>
 
 	<xmp_type name='stArea_unit' extends='closedchoice' element_type='text'>
-			<xmp_choice raw_value='normalized' label='$$$/rmd/Property/stArea_Choice_Normalized=Normalized'/>
+		<xmp_choice raw_value='normalized' label='$$$/rmd/Property/stArea_Choice_Normalized=Normalized'/>
 	</xmp_type>
 
 	<xmp_type name='Area' description='$$$/rmd/Property/AreaDescription=Area of interest' label='$$$/rmd/Property/AreaLabel=Area'>
