@@ -2,7 +2,7 @@
 
 This XMP extension is based on the [Responsive Metadata XMP standard](https://github.com/universalimages/rmd). It allows editing the XMP metadata using the 'File info' dialog in Adobe Photoshop.
 
-To install it, copy the whole folder into one of the user-specific or general shared resource folders:
+To install it, copy the `rmd-extension` folder into one of the user-specific or general shared resource folders:
 
 **Windows**
 
