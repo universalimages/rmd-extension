@@ -34,6 +34,8 @@
 
 		<property name="rmd:MinWidth" />
 
+		<property name="rmd:RecommendedFrames" />
+
 		<property name="rmd:Interpolation" />
 
 <!--
