@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extension xmlns="http://ns.adobe.com/metadata/extension/1.0/"
+   name="io.github.universalimages"
+   version="0.1"
+   locFilePrefix="universalimages">
+</extension>

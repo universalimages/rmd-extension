@@ -1,0 +1,66 @@
+<!--
+
+
+-->
+
+<xmp_definitions>
+  <!-- Defining the namespace and prefix of the schema -->
+	<xmp_schema prefix='rmd' namespace='http://universalimages.github.io/rmd/' label='Universal Images Schema' description='This Schema can be used for the XMP UI in Adobe products.'>
+
+		<!-- Starting defining the properties, for definition of different attribute please refer documentation -->
+
+		<xmp_property name='AppliedToDimensions' category='external' type='Dimensions' label="$$$/sampleSchema/Property/AppliedToDimensions_Label=Applied to dimensions"  description='$$$/sampleSchema/Property/AppliedToDimensions_Description=Dimensions of the image when the metadata was written'/>
+
+		<xmp_property name='AllowedDerivates' category='external' type='closedchoice' element_type='text' label="$$$/rmd/Property/AllowedDerivatesInputLabel=Allowed Derivates"  description='$$$/rmd/Property/AllowedDerivatesInputDescription=Allow or limit the modification of this media file'>
+			<xmp_choice raw_value='none' label='$$$/rmd/Property/allowedDerivates_Choice_None=None'/>
+			<xmp_choice raw_value='visibilityOnly' label='$$$/rmd/Property/allowedDerivates_Choice_VisibilityOnly=Visibility Only'/>
+			<xmp_choice raw_value='all' label='$$$/rmd/Property/allowedDerivates_Choice_All=All'/>
+		</xmp_property>
+
+		<xmp_property name='SafeArea' category='external' type='Area' label="$$$/sampleSchema/Property/SafeArea_Label=Safe Area"  description='$$$/sampleSchema/Property/SafeArea_Description=Area which cannot be cropped into'/>
+
+		<xmp_property name='PivotPoint' category='external' type='Area' label="$$$/sampleSchema/Property/PivotPoint_Label=Pivot Point"  description='$$$/sampleSchema/Property/PivotPoint_Description=Center point for crop and resize'/>
+
+		<xmp_property name='MinWidth' category='external' type='integer' label="$$$/rmd/Property/MinWidth_Label=Min Width"  description='$$$/sampleSchema/Property/MinWidth_Description=Minimal width of the element (in CSS pixels) required to show the full image'/>
+
+
+		<xmp_property name='Interpolation' category='external' type='closedchoice' element_type='text' label="$$$/rmd/Property/Interpolation_Label=Interpolation"  description='$$$/rmd/Property/Interpolation_Description=Specifies how to calculate intermediate sizes'>
+			<xmp_choice raw_value='linear' label='$$$/rmd/Property/Interpolation_Choice_Linear=Linear'/>
+			<xmp_choice raw_value='step' label='$$$/rmd/Property/Interpolation_Choice_Step=Step'/>
+		</xmp_property>
+
+  </xmp_schema> <!-- Schema Definition ends here -->
+
+	<!-- Defining Composed Types -->
+
+	<xmp_type name='stDim_unit' extends='closedchoice' element_type='text'>
+	  <xmp_choice raw_value='pixel' label='$$$/rmd/Property/stDim_Choice_Pixel=Pixel'/>
+	</xmp_type>
+
+  <xmp_type name='Dimensions' description='$$$/rmd/Property/DimensionsDescription=Dimensions of the image' label='$$$/rmd/Property/DimensionsLabel=Image Dimensions'>
+
+    <xmp_field name='w' prefix='stDim' namespace='http://ns.adobe.com/xap/1.0/sType/Dimensions#' type='integer' label='$$$/rmd/Property/stDim_W_Label=Width' description='$$$/rmd/Property/stDim_W_Description=Image width in Pixels'/>
+
+    <xmp_field name='h' prefix='stDim' namespace='http://ns.adobe.com/xap/1.0/sType/Dimensions#' type='integer' label='$$$/rmd/Property/stDim_H_Label=Height' description='$$$/rmd/Property/stDim_H_Description=Image height in Pixels'/>
+
+    <xmp_field name='unit' prefix='stDim' namespace='http://ns.adobe.com/xap/1.0/sType/Dimensions#' type='stDim_unit' label='$$$/rmd/Property/stDim_Unit_Label=Unit' description='$$$/rmd/Property/stDim_Unit_Description=Measuring Unit'/>
+  </xmp_type>
+
+	<xmp_type name='stArea_unit' extends='closedchoice' element_type='text'>
+			<xmp_choice raw_value='normalized' label='$$$/rmd/Property/stArea_Choice_Normalized=Normalized'/>
+	</xmp_type>
+
+	<xmp_type name='Area' description='$$$/rmd/Property/AreaDescription=Area of interest' label='$$$/rmd/Property/AreaLabel=Area'>
+
+		<xmp_field name='x' prefix='stArea' namespace='http://ns.adobe.com/xmp/sType/Area#' type='real' label='$$$/rmd/Property/stArea_X_Label=Center X' description='$$$/rmd/Property/stArea_X_Description=Center horizontally'/>
+
+    <xmp_field name='y' prefix='stArea' namespace='http://ns.adobe.com/xmp/sType/Area#' type='real' label='$$$/rmd/Property/stArea_Y_Label=Center Y' description='$$$/rmd/Property/stArea_Y_Description=Center vertically'/>
+
+    <xmp_field name='w' prefix='stArea' namespace='http://ns.adobe.com/xmp/sType/Area#' type='real' label='$$$/rmd/Property/stArea_W_Label=Width' description='$$$/rmd/Property/stArea_W_Description=Area width'/>
+
+    <xmp_field name='h' prefix='stArea' namespace='http://ns.adobe.com/xmp/sType/Area#' type='real' label='$$$/rmd/Property/stArea_H_Label=Height' description='$$$/rmd/Property/stArea_H_Description=Area height'/>
+
+    <xmp_field name='unit' prefix='stArea' namespace='http://ns.adobe.com/xmp/sType/Area#' type='stArea_unit' label='$$$/rmd/Property/stArea_Unit_Label=Unit' description='$$$/rmd/Property/stArea_Unit_Description=Measuring Unit'/>
+  </xmp_type>
+
+</xmp_definitions>
