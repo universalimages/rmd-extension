@@ -11,7 +11,7 @@
 
 		<xmp_property name='AppliedToDimensions' category='external' type='Dimensions' label="$$$/sampleSchema/Property/AppliedToDimensions_Label=Applied to dimensions"  description='$$$/sampleSchema/Property/AppliedToDimensions_Description=Dimensions of the image when the metadata was written'/>
 
-		<xmp_property name='AllowedDerivates' category='external' type='closedchoice' element_type='text' label="$$$/rmd/Property/AllowedDerivatesInputLabel=Allowed Derivates"  description='$$$/rmd/Property/AllowedDerivatesInputDescription=Allow or limit the modification of this media file'>
+		<xmp_property name='AllowedDerivates' category='external' type='Derivates' label="$$$/rmd/Property/AllowedDerivatesInputLabel=Allowed Derivates"  description='$$$/rmd/Property/AllowedDerivatesInputDescription=Allow or limit the modification of this media file'>
 			<xmp_choice raw_value='none' label='$$$/rmd/Property/allowedDerivates_Choice_None=None'/>
 			<xmp_choice raw_value='visibilityOnly' label='$$$/rmd/Property/allowedDerivates_Choice_VisibilityOnly=Visibility Only'/>
 			<xmp_choice raw_value='all' label='$$$/rmd/Property/allowedDerivates_Choice_All=All'/>
@@ -40,7 +40,7 @@
 	  <xmp_choice raw_value='pixel' label='$$$/rmd/Property/stDim_Choice_Pixel=Pixel'/>
 	</xmp_type>
 
-  <xmp_type name='Dimensions' description='$$$/rmd/Property/DimensionsDescription=Dimensions of the image' label='$$$/rmd/Property/DimensionsLabel=Image Dimensions'>
+  <xmp_type name='Dimensions' description='$$$/rmd/Property/Dimensions_Description=Dimensions of the image' label='$$$/rmd/Property/Dimensions_Label=Image Dimensions'>
 
     <xmp_field name='w' prefix='stDim' namespace='http://ns.adobe.com/xap/1.0/sType/Dimensions#' type='integer' label='$$$/rmd/Property/stDim_W_Label=Width' description='$$$/rmd/Property/stDim_W_Description=Image width in Pixels'/>
 
@@ -50,6 +50,16 @@
 		  <xmp_choice raw_value='pixel' label='$$$/rmd/Property/stDim_Choice_Pixel=Pixel'/>
 		</xmp_field>
   </xmp_type>
+
+	<xmp_type name='Derivates' description='$$$/rmd/Property/Derivates_Description=The allowed changes to the media file' label='$$$/rmd/Property/Derivates_Label=Allowed Derivates'>
+		<xmp_field name='Crop'
+			prefix='rmd' namespace='http://universalimages.github.io/rmd/'
+			type='closedchoice' element_type='text' label="$$$/rmd/Property/AllowedDerivatesCrop_Label=Crop"  description='$$$/rmd/Property/AllowedDerivatesCrop_Description=Allow or limit when to crop'>
+			<xmp_choice raw_value='none' label='$$$/rmd/Property/allowedDerivates_Choice_None=None'/>
+			<xmp_choice raw_value='visibilityOnly' label='$$$/rmd/Property/allowedDerivates_Choice_VisibilityOnly=Visibility Only'/>
+			<xmp_choice raw_value='all' label='$$$/rmd/Property/allowedDerivates_Choice_All=All'/>
+		</xmp_field>
+	</xmp_type>
 
 	<xmp_type name='stArea_unit' extends='closedchoice' element_type='text'>
 		<xmp_choice raw_value='normalized' label='$$$/rmd/Property/stArea_Choice_Normalized=Normalized'/>
