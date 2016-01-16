@@ -1,62 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <views xmlns="http://ns.adobe.com/metadata/ui/1.0/"> <!--Including the default namespace is a must -->
-<!-- Views can have multiple views (panels) -->
+    <!-- Views can have multiple views (panels) -->
 
-	<!-- This sample view displays all the properties of sampleSchema -->
-	<view
-		xmlns:rmd="http://universalimages.github.io/rmd/"
-    xmlns:exif="http://ns.adobe.com/exif/1.0/"
-    xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
-    xmlns:stArea="http://ns.adobe.com/xmp/sType/Area#"
-		name="rmd.allProperties"
-		label="$$$/rmd/Property/AllPropsViewLabel=Responsive Metadata"
-		description="$$$/rmd/Property/AllPropsViewDescription=This view displays all the properties defined in the Schema">
+    <!-- This sample view displays all the properties of sampleSchema -->
+    <view
+            xmlns:rmd="http://universalimages.github.io/rmd/0.1/"
+            xmlns:exif="http://ns.adobe.com/exif/1.0/"
+            name="rmd.allProperties"
+            label="$$$/rmd/Property/AllPropsViewLabel=Responsive Metadata"
+            description="$$$/rmd/Property/AllPropsViewDescription=This view displays all the properties defined in the Schema">
 
-    <formatter label="Image Size"
-    description="Shows the X and Y size of the image" format="{@0} x {@1} pixel">
-      <property name="exif:PixelXDimension" readOnly="true"/>
-      <property name="exif:PixelYDimension" readOnly="true"/>
-    </formatter>
+        <formatter label="Image Size"
+                   description="Shows the X and Y size of the image"
+                   format="{@0} x {@1} pixel">
+            <property name="exif:PixelXDimension" readOnly="true"/>
+            <property name="exif:PixelYDimension" readOnly="true"/>
+        </formatter>
 
 
-		<property name="rmd:AppliedToDimensions" />
+        <property name="rmd:AppliedToDimensions"/>
 
-		<property name="rmd:AllowedDerivates" />
+        <property name="rmd:AllowedDerivates"/>
 
-		<property name="rmd:SafeArea" />
+        <property name="rmd:SafeArea">
+            <property name="rmd:SafeArea/stArea:x" />
+            <property name="rmd:SafeArea/stArea:y" />
+            <property name="rmd:SafeArea/stArea:w" />
+            <property name="rmd:SafeArea/stArea:h" />
+            <property name="rmd:SafeArea/rmd:MaxWidth" />
+        </property>
 
-		<property name="rmd:PivotPoint">
-      <property name="rmd:PivotPoint/stArea:x" />
-      <property name="rmd:PivotPoint/stArea:y" />
-      <property name="rmd:PivotPoint/stArea:unit" />
-    </property>
+        <property name="rmd:CropArea">
+            <property name="rmd:CropArea/stArea:x" />
+            <property name="rmd:CropArea/stArea:y" />
+            <property name="rmd:CropArea/stArea:w" />
+            <property name="rmd:CropArea/stArea:h" />
+            <property name="rmd:CropArea/rmd:MinWidth" />
+        </property>
 
-		<property name="rmd:MinWidth" />
+        <property name="rmd:PivotPoint"/>
 
-		<property name="rmd:RecommendedFrames" />
+        <property name="rmd:RecommendedFrames"/>
 
-		<property name="rmd:Interpolation" />
+        <property name="rmd:Interpolation"/>
 
-<!--
-		<property name="sampleSchema:Boolean" />
-		<property name="sampleSchema:Boolean_readOnly" />
-		<property name="sampleSchema:Integer" />
-		<property name="sampleSchema:Text" />
-		<property name="sampleSchema:Real" />
-		<property name="sampleSchema:OpenChoice" />
-		<property name="sampleSchema:ClosedChoice" />
-		<property name="sampleSchema:Sequence" />
-		<property name="sampleSchema:Bag" />
-		<property name="sampleSchema:Alt" />
-		<property name="sampleSchema:Date" />
-		<property name="sampleSchema:Rating" />
-		<property name="sampleSchema:URL" />
-		<property name="sampleSchema:ExtendsOpenChoice" />
-		<property name="sampleSchema:ExtendsReal" />
+        <!--
+                <property name="sampleSchema:Boolean" />
+                <property name="sampleSchema:Boolean_readOnly" />
+                <property name="sampleSchema:Integer" />
+                <property name="sampleSchema:Text" />
+                <property name="sampleSchema:Real" />
+                <property name="sampleSchema:OpenChoice" />
+                <property name="sampleSchema:ClosedChoice" />
+                <property name="sampleSchema:Sequence" />
+                <property name="sampleSchema:Bag" />
+                <property name="sampleSchema:Alt" />
+                <property name="sampleSchema:Date" />
+                <property name="sampleSchema:Rating" />
+                <property name="sampleSchema:URL" />
+                <property name="sampleSchema:ExtendsOpenChoice" />
+                <property name="sampleSchema:ExtendsReal" />
 
-		<property name="sampleSchema:ComposedStruct" />
-		<property name="sampleSchema:ArrOfStruct" />
--->
-	</view>
+                <property name="sampleSchema:ComposedStruct" />
+                <property name="sampleSchema:ArrOfStruct" />
+        -->
+    </view>
 </views>
