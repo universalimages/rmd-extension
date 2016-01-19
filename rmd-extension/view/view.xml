@@ -6,6 +6,7 @@
     <!-- This sample view displays all the properties of sampleSchema -->
     <view
             xmlns:rmd="http://universalimages.github.io/rmd/0.1/"
+            xmlns:stArea="http://ns.adobe.com/xmp/sType/Area#"
             xmlns:exif="http://ns.adobe.com/exif/1.0/"
             name="rmd.allProperties"
             label="$$$/rmd/Property/AllPropsViewLabel=Responsive Metadata"

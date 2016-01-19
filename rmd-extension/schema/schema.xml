@@ -1,6 +1,7 @@
 <xmp_definitions>
     <!-- Defining the namespace and prefix of the schema -->
-    <xmp_schema prefix='rmd' namespace='http://universalimages.github.io/rmd/0.1/'
+    <xmp_schema prefix='rmd'
+                namespace='http://universalimages.github.io/rmd/0.1/'
                 label='Universal Images Schema'
                 description='This Schema can be used for the XMP UI in Adobe products.'>
 
@@ -25,11 +26,11 @@
 
         <xmp_property name='SafeArea' category='external' type='FrameStruct'
                       label="$$$/sampleSchema/Property/SafeArea_Label=Safe Area"
-                      description='$$$/sampleSchema/Property/SafeArea_Description=Area which cannot be cropped into' />
+                      description='$$$/sampleSchema/Property/SafeArea_Description=Area which cannot be cropped into'/>
 
         <xmp_property name='CropArea' category='external' type='FrameStruct'
                       label="$$$/sampleSchema/Property/CropArea_Label=Crop Area"
-                      description='$$$/sampleSchema/Property/CropArea_Description=The default crop area' />
+                      description='$$$/sampleSchema/Property/CropArea_Description=The default crop area'/>
 
         <xmp_property name='PivotPoint' category='external' type='AreaPoint'
                       label="$$$/sampleSchema/Property/PivotPoint_Label=Pivot Point"
@@ -87,9 +88,10 @@
     <xmp_type name='Derivates'
               description='$$$/rmd/Property/Derivates_Description=The allowed changes to the media file'
               label='$$$/rmd/Property/Derivates_Label=Allowed Derivates'>
+
         <xmp_field name='Crop'
                    prefix='rmd'
-                   namespace='http://universalimages.github.io/rmd/'
+                   namespace='http://universalimages.github.io/rmd/0.1/'
                    type='closedchoice' element_type='text'
                    label="$$$/rmd/Property/AllowedDerivatesCrop_Label=Crop"
                    description='$$$/rmd/Property/AllowedDerivatesCrop_Description=Allow or limit when to crop'>
@@ -148,22 +150,26 @@
                    description='$$$/rmd/Property/stArea_H_Description=Area height'/>
 
         <xmp_field name='MinAspectRatio' prefix='rmd'
-                   namespace='http://universalimages.github.io/rmd/' type='real'
+                   namespace='http://universalimages.github.io/rmd/0.1/'
+                   type='real'
                    label='$$$/rmd/Property/frameStruct_MinAspect_Label=Minimal aspect ratio'
                    description='$$$/rmd/Property/frameStruct_MinAspect_Description=Minimal aspect ratio for which this region can be used'/>
 
         <xmp_field name='MaxAspectRatio' prefix='rmd'
-                   namespace='http://universalimages.github.io/rmd/' type='real'
+                   namespace='http://universalimages.github.io/rmd/0.1/'
+                   type='real'
                    label='$$$/rmd/Property/frameStruct_MaxAspect_Label=Maximum aspect ratio'
                    description='$$$/rmd/Property/frameStruct_MaxAspect_Description=Maximum aspect ratio for which this region can be used'/>
 
         <xmp_field name='MinWidth' prefix='rmd'
-                   namespace='http://universalimages.github.io/rmd/' type='real'
+                   namespace='http://universalimages.github.io/rmd/0.1/'
+                   type='real'
                    label='$$$/rmd/Property/frameStruct_MinWidth_Label=Minimal container width'
                    description='$$$/rmd/Property/frameStruct_MinWidth_Description=Minimal container width for which this region can be used (in CSS pixels)'/>
 
         <xmp_field name='MaxWidth' prefix='rmd'
-                   namespace='http://universalimages.github.io/rmd/' type='real'
+                   namespace='http://universalimages.github.io/rmd/0.1/'
+                   type='real'
                    label='$$$/rmd/Property/frameStruct_MaxWidth_Label=Maximum container width'
                    description='$$$/rmd/Property/frameStruct_MaxWidth_Description=Maximum container width for which this region can be used (in CSS pixels)'/>
     </xmp_type>
